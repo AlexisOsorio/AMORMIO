@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Para Ruth 💖</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffd6e7, #ffeef5);
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .card {
+        background: white;
+        width: 420px;
+        padding: 40px 30px;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        position: relative;
+        animation: fadeIn 1.5s ease;
+      }
+
+      .card h1 {
+        color: #ff4f88;
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+
+      .heart-decor {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .question {
+        font-size: 20px;
+        color: #ff4f88;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .buttons {
+        margin-top: 10px;
+      }
+
+      button {
+        padding: 10px 22px;
+        border-radius: 30px;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 5px;
+        transition: 0.3s;
+      }
+
+      .yes {
+        background: #ff4f88;
+        color: white;
+      }
+
+      .yes:hover {
+        transform: scale(1.08);
+        box-shadow: 0 5px 15px rgba(255, 79, 136, 0.4);
+      }
+
+      .no {
+        background: #eee;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="heart-decor">💖</div>
+      <h1>Mi cielo hermoso</h1>
+
+      <p>
+        Desde que llegaste a mi vida todo es más bonito. Me haces sentir paz,
+        alegría y un amor sincero que no sabía que existía. Cada momento contigo
+        es especial.
+      </p>
+
+      <div class="question">¿Quieres ser mi San Valentín? 🌹</div>
+
+      <div class="buttons">
+        <button class="yes" onclick="aceptar()">Sí, mi amor 💕</button>
+        <button class="no" id="noBtn" onmouseover="moverNo()">No 😅</button>
+      </div>
+    </div>
+
+    <script>
+      function aceptar() {
+        alert("Sabía que dirías que sí 🥰 Te amo mucho mi niña hermosa mi bebeeeee ❤️");
+      }
+
+      function moverNo() {
+        const btn = document.getElementById("noBtn");
+        btn.style.position = "absolute";
+        btn.style.left = Math.random() * 200 + "px";
+        btn.style.top = Math.random() * 200 + "px";
+      }
+    </script>
+  </body>
+</html>
